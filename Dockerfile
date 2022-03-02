@@ -1,5 +1,5 @@
 FROM centos:centos7
-MAINTAINER Brian Kocoloski <brian.kocoloski@wustl.edu>
+LABEL maintainer="Brian Kocoloski <brian.kocoloski@wustl.edu>"
 
 ENV USER cc
 ENV HOME /home/${USER}
@@ -17,9 +17,11 @@ RUN yum -y install openssh-server openssh-clients \
            libdb-cxx-devel libaio-devel openssl-devel readline-devel \
            libgtop2-devel glib-devel python python-devel python-pip openmpi-devel \
            boost-devel
-
+          
 # Install py4mpi
-RUN pip install --upgrade pip mpi4py
+RUN pip install --upgrade "pip < 21.0" 3to2 && \
+    pip install mpi4py
+
 
 # User creation
 RUN useradd ${USER}
