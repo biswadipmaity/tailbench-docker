@@ -8,8 +8,8 @@ ENV JAVA_HOME /etc/elternatives/jre
 ENV PATH "/usr/lib64/openmpi/bin:${PATH}"
 ENV LD_LIBRARY_PATH "/usr/lib64/openmpi/lib"
 
-RUN yum -y install epel-release && yum -y update
-RUN yum -y install openssh-server openssh-clients \
+RUN yum -y install epel-release && yum -y update && \
+    yum -y install openssh-server openssh-clients \
            gperftools google-perftools gcc gcc-c++ make automake wget less file \
            libtool bison autoconf numpy scipy swig ant \
            java-1.8.0-openjdk java-1.8.0-openjdk-devel \
@@ -17,7 +17,7 @@ RUN yum -y install openssh-server openssh-clients \
            libdb-cxx-devel libaio-devel openssl-devel readline-devel \
            libgtop2-devel glib-devel python python-devel python-pip openmpi-devel \
            boost-devel
-          
+
 # Install py4mpi
 RUN pip install --upgrade "pip < 21.0" 3to2 && \
     pip install mpi4py
