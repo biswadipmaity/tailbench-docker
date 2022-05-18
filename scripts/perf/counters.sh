@@ -25,5 +25,5 @@ fi
 
 perf stat -I 1000 \
     -a \
-    --event=cpu_clk_unhalted.thread,offcore_requests_outstanding.all_data_rd,int_misc.recovery_cycles_any,cycle_activity.stalls_l3_miss,cycle_activity.stalls_mem_any \
+    --event=cpu_clk_unhalted.thread,instructions,offcore_requests_outstanding.all_data_rd,cycle_activity.stalls_l3_miss,cycle_activity.stalls_mem_any,offcore_requests.all_requests \
     --output $file
