@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TB_DIR="${HOME}/workspace/hpca/tailbench-docker"
+TB_DIR="${HOME}/tailbench-docker"
 C_HOME="/home/cc"
 NAME="tailbench"
 

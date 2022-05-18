@@ -1,3 +1,3 @@
 #!/bin/bash
 
-make -j16
+make CFLAGS=-fPIC -j16
