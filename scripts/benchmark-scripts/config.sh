@@ -7,7 +7,7 @@ REQS=${REQS:-10000}
 QPS=${QPS:-500}
 MINSLEEPNS=${MINSLEEPNS:-100000}
 
-TB_DIR="${HOME}/workspace/hpca/tailbench-docker"
+TB_DIR="${HOME}/tailbench-docker"
 UTILS_DIR="src/utilities"
 parser="${UTILS_DIR}/parselats.py"
 

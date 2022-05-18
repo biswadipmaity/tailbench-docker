@@ -1,9 +1,17 @@
-# tailbench-docker
+# Docker for running Tailbench applications
 
-# build instructions
+# Build instructions
+Clone in home folder
+
 ```
-./script/build.sh
+bash setup.sh
+cd scripts
+bash build.sh
 ```
-# run instructions
-```
-```
+
+# Initialize tailbench server
+1. Find and replace all occurances of `TB_DIR` (e.g., `scripts/start.sh`)
+2. `bash start.sh`
+
+# Run Experiments
+
